@@ -316,7 +316,7 @@ class Application(QWidget):
         self.animation_duration = 200
         self.setStyleSheet('background-color:#211B1B')
 
-        self.Icon = QIcon('icons8-bee-100.png')
+        self.Icon = QIcon('images/icons8-bee-100.png')
         self.setWindowIcon(self.Icon)
         self.setWindowTitle("Algorytm ABC")
 
@@ -383,7 +383,7 @@ class Application(QWidget):
 
         #ustawienie przycisku menu######
         self.menu_btn = QPushButton(self)
-        self.menu_pixmap = QPixmap('icons8-menu-64.png')
+        self.menu_pixmap = QPixmap('images/icons8-menu-64.png')
         self.menu_btn.setIcon(QIcon(self.menu_pixmap))
         self.menu_btn.setIconSize(self.menu_btn.size())
         self.menu_btn.setFlat(True)
@@ -396,7 +396,7 @@ class Application(QWidget):
         ##########
 
         self.import_btn = QPushButton(self)
-        self.import_pixmap = QPixmap('icons8-import-64.png')
+        self.import_pixmap = QPixmap('images/icons8-import-64.png')
         self.import_btn.setIcon(QIcon(self.import_pixmap))
         self.import_btn.setIconSize(self.import_btn.size())
         self.import_btn.setFlat(True)
@@ -408,7 +408,7 @@ class Application(QWidget):
 
         #ustawienie ikonki na srodku#######
         self.bee_label = QLabel(self)
-        self.icon_bee = QPixmap('bee_noc.png')
+        self.icon_bee = QPixmap('images/bee_noc.png')
         self.icon_bee_scaled = self.icon_bee.scaled(self.icon_bee.width()//2, self.icon_bee.height()//2, Qt.KeepAspectRatio)
         self.bee_label.setPixmap(self.icon_bee_scaled)
         self.layoutH2.addWidget(self.bee_label, alignment = Qt.AlignCenter)
@@ -434,38 +434,38 @@ class Application(QWidget):
         
         self.result = QPushButton("Wynik rozwiazania", self.menu_frame)
         self.result_icon = QLabel(self)
-        self.result_icon.setPixmap(QPixmap('icons8-result-64.png'))
+        self.result_icon.setPixmap(QPixmap('images/icons8-result-64.png'))
         self.result.clicked.connect(self.result_ui)
 
 
         self.parameters = QPushButton("Parametery", self.menu_frame)
         self.parameters_label = QLabel(self)
-        self.parameters_label.setPixmap(QPixmap('icons8-queen-bee-48.png'))
+        self.parameters_label.setPixmap(QPixmap('images/icons8-queen-bee-48.png'))
         self.parameters.clicked.connect(self.parameters_ui)
 
         self.diagram = QPushButton("Wykres funkcji celu", self.menu_frame)
         self.diagram_label = QLabel(self)
-        self.diagram_label.setPixmap(QPixmap('icons8-coordinate-system-48.png'))
+        self.diagram_label.setPixmap(QPixmap('images/icons8-coordinate-system-48.png'))
         self.diagram.clicked.connect(self.diagram_ui)
 
         self.demand = QPushButton("Producenci i odbiorcy", self.menu_frame)
         self.demand_label = QLabel(self)
-        self.demand_label.setPixmap(QPixmap('icons8-customers-40.png'))
+        self.demand_label.setPixmap(QPixmap('images/icons8-customers-40.png'))
         self.demand.clicked.connect(self.demand_ui)
 
         self.price = QPushButton("Ceny produktow", self.menu_frame)
         self.price_label = QLabel(self)
-        self.price_label.setPixmap(QPixmap('icons8-price-48.png'))
+        self.price_label.setPixmap(QPixmap('images/icons8-price-48.png'))
         self.price.clicked.connect(self.price_ui)
 
         self.distance = QPushButton("Ustalenie dystansow", self.menu_frame)
         self.distance_label = QLabel(self)
-        self.distance_label.setPixmap(QPixmap('icons8-distance-48.png'))
+        self.distance_label.setPixmap(QPixmap('images/icons8-distance-48.png'))
         self.distance.clicked.connect(self.distance_ui)
 
         self.main_prev = QPushButton("Menu główne", self.menu_frame)
         self.main_prev_label = QLabel(self)
-        self.main_prev_label.setPixmap(QPixmap('icons8-home-page-40.png'))
+        self.main_prev_label.setPixmap(QPixmap('images/icons8-home-page-40.png'))
         self.main_prev.clicked.connect(self.main_prev_ui)
     
         self.result.setStyleSheet('background-color:darkviolet; color:white')
@@ -646,7 +646,7 @@ class Application(QWidget):
         self.parameters_layoutH4.addWidget(self.set_iteration, alignment=Qt.AlignTop)
 
         self.parameters_icon = QLabel(self.parameters_page)
-        self.parameters_icon_bee = QPixmap('param.png')
+        self.parameters_icon_bee = QPixmap('images/param.png')
         self.parameters_icon_bee_scaled = self.parameters_icon_bee.scaled(self.parameters_icon_bee.width() // 2, self.parameters_icon_bee.height() // 2, Qt.KeepAspectRatio)
         self.parameters_icon.setPixmap(self.parameters_icon_bee_scaled)
         self.parameters_layoutH5.addWidget(self.parameters_icon, alignment = Qt.AlignCenter)
@@ -686,7 +686,7 @@ class Application(QWidget):
         self.progress_bar.hide()
 
         self.diagram_icon = QLabel(self.diagram_page)
-        self.diagram_icon_bee = QPixmap('eng.png')
+        self.diagram_icon_bee = QPixmap('images/eng.png')
         self.diagram_icon_bee_scaled = self.diagram_icon_bee.scaled(self.diagram_icon_bee.width() // 2.3, self.diagram_icon_bee.height() // 2.3, Qt.KeepAspectRatio)
         self.diagram_icon.setPixmap(self.diagram_icon_bee_scaled)
         self.diagram_frame_layout.addWidget(self.diagram_icon, alignment = Qt.AlignCenter)
@@ -849,7 +849,7 @@ class Application(QWidget):
 
         self.price_grid_layout = QGridLayout(self.price_frame)
         self.price_icon = QLabel(self.price_page)
-        self.price_icon_bee = QPixmap('price.png')
+        self.price_icon_bee = QPixmap('images/price.png')
         self.price_icon_bee_scaled = self.price_icon_bee.scaled(self.price_icon_bee.width() // 2, self.price_icon_bee.height() // 2, Qt.KeepAspectRatio)
         self.price_icon.setPixmap(self.price_icon_bee_scaled)
         self.price_layoutH5.addWidget(self.price_icon, alignment = Qt.AlignCenter)
@@ -890,7 +890,7 @@ class Application(QWidget):
         self.distance_layoutH2.addWidget(self.distance_text)
 
         self.distance_icon = QLabel(self.distance_page)
-        self.distance_icon_bee = QPixmap('distance.png')
+        self.distance_icon_bee = QPixmap('images/distance.png')
         self.distance_icon_bee_scaled = self.distance_icon_bee.scaled(self.distance_icon_bee.width() // 2, self.distance_icon_bee.height() // 2, Qt.KeepAspectRatio)
         self.distance_icon.setPixmap(self.distance_icon_bee_scaled)
         self.distance_layoutH5.addWidget(self.distance_icon, alignment = Qt.AlignCenter)
@@ -933,7 +933,7 @@ class Application(QWidget):
         self.result_frame_layout.addStretch(20)
 
         self.result_icon_ground = QLabel(self.parameters_page)
-        self.result_icon_bee = QPixmap('result_.png')
+        self.result_icon_bee = QPixmap('images/result_.png')
         self.result_icon_bee_scaled = self.result_icon_bee.scaled(self.result_icon_bee.width() // 2, self.result_icon_bee.height() // 2, Qt.KeepAspectRatio)
         self.result_icon_ground.setPixmap(self.result_icon_bee_scaled)
         self.result_layoutH3.addWidget(self.result_icon_ground, alignment = Qt.AlignCenter)
